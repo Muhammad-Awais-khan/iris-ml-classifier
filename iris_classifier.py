@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
+from sklearn.model_selection import train_test_split
 from sklearn.datasets import load_iris
 
 iris = load_iris()
@@ -25,6 +26,11 @@ sns.heatmap(df.corr(), annot=True, cmap='coolwarm')
 plt.title('Feature Correlation Heatmap')
 plt.show()
 
+x = df.drop('target', axis=1)
+y = df['target']
 
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=42)
 
+print("Training set size:", x_train.shape)
+print("Test set size:", x_test.shape)
 
