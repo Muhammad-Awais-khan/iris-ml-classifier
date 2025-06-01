@@ -51,3 +51,8 @@ plt.title('Confusion Matrix')
 plt.xlabel('Predicted')
 plt.ylabel('Actual')
 plt.show()
+
+sample = [[5.1, 3.5, 1.4, 0.2]]
+prediction = knn.predict(sample)
+predicted_class = iris.target_names[prediction[0]]
+print(f"Predicted class for sample {sample} is: {predicted_class}")
