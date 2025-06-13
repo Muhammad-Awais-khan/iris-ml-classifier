@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Prediction Result</h2>
+    <div class="result-box">
+        <p>The predicted Iris species is:</p>
+        <h3>{{ prediction }}</h3>
+    </div>
+
+    <a href="{{ url_for('home') }}"><button>Try Again</button></a>
+</body>
+</html>
