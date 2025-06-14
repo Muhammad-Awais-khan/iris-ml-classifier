@@ -26,7 +26,7 @@ def predict():
         
         iris_classes = ['Setosa', 'Versicolor', 'Virginica']
         flower_name = iris_classes[prediction]
-        return render_template('result.html', flower=flower_name)
+        return render_template('result.html', prediction=flower_name)
 
     except ValueError:
         return "❌ Invalid input. Please enter numeric values for all features."

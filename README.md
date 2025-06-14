@@ -1,45 +1,86 @@
-# 🌸 Iris Classifier
+# 🌸 Iris Flower Classifier Web App
 
-> Predict Iris flower species using machine learning (KNN)
-
----
-
-## 📖 Overview
-
-The **Iris Classifier** is a beginner-friendly machine learning project that classifies iris flowers into three species: *Setosa*, *Versicolor*, and *Virginica*, based on four key features. It demonstrates the end-to-end process of building a simple ML pipeline: loading data, visualizing it, training a model, evaluating performance, and predicting new samples.
-
-### 🔍 Why this project?
-
-- Learn the basics of supervised learning using the Iris dataset
-- Practice Python, data visualization, and ML libraries like `scikit-learn`
-- Explore how to build, train, and deploy a classification model
+This is a web application that uses a trained K-Nearest Neighbors (KNN) model to classify iris flowers into three species:
+- Setosa
+- Versicolor
+- Virginica
 
 ---
 
-## 🧰 Technologies Used
-
-- Python 3.8+
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Scikit-learn
+## 🧠 Tech Stack
+- **Frontend:** HTML, CSS (with Flask templates)
+- **Backend:** Flask (Python)
+- **Machine Learning:** scikit-learn (KNN Classifier)
+- **Deployment:** Render
 
 ---
 
-## ✨ Features
+## 📦 Project Structure
 
-- Load and preprocess Iris dataset using `sklearn.datasets`
-- Data visualization: pairplot, heatmap, confusion matrix
-- Train a **K-Nearest Neighbors (KNN)** classifier
-- Evaluate with accuracy, classification report, and confusion matrix
-- Make predictions on new user-defined input samples
+```
+iris-ml-classifier/
+├── app.py                  # Flask web server
+├── train_model.py          # Script to train and save the KNN model
+├── knn_model.joblib        # Saved ML model
+├── templates/
+│   ├── index.html          # Input form
+│   └── result.html         # Prediction result display
+├── static/
+│   └── style.css           # CSS styling
+├── requirements.txt        # Python dependencies
+├── Procfile                # Deployment config for Render
+└── README.md               # Project documentation
+```
 
 ---
 
-## ⚙️ Installation
+## 🚀 How to Run Locally
 
-### 1. Clone the repository
+1. **Clone the repo:**
+   ```bash
+   git clone https://github.com/Muhammad-Awais-khan/iris-ml-classifier
+   cd iris-webapp
+   ```
+
+2. **Create and activate a virtual environment:**
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+
+3. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Run the app:**
+   ```bash
+   python app.py
+   ```
+
+5. Open your browser and go to: [http://localhost:5000](http://localhost:5000)
+
+---
+
+## 🌐 Live Demo
+
+*Will be added after deployment*
+
+---
+
+## 📁 To Train the Model
+
+If you want to retrain the model or tweak parameters:
+
 ```bash
-git clone https://github.com/Muhammad-Awais-khan/iris-ml-classifier
-cd iris-ml-classifier
+python train_model.py
+```
+
+---
+
+## 🙌 Credits
+
+Created by **Muhammad Awais**  
+Final Project for Harvard's **CS50x** course.
+
+---
