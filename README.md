@@ -64,7 +64,7 @@ iris-ml-classifier/
 
 ## 🌐 Live Demo
 
-*Will be added after deployment*
+[https://youtu.be/be9qfSySxJw](https://youtu.be/be9qfSySxJw)
 
 ---
 
